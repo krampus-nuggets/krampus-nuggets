@@ -1,5 +1,5 @@
 # 💫 About Me:
-🔭 I’m currently working in Logistics @Tripplo-Software<br>🌱 I’m currently learning Programmatic Micro-Trading<br>⚡ Fun fact, there's a hole in your left wing
+🔭 I’m currently working in Logistics @ [Tripplo](https://github.com/Tripplo-Software)<br>🌱 I’m currently learning Programmatic Micro-Trading<br>⚡ Fun fact, there's a hole in your left wing
 
 
 ## 🌐 Socials:
