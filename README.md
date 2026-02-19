@@ -1,1 +1,1 @@
-<p align="center"><img src="github-metrics.svg?random=0" alt="GitHub metrics" width="100%"></p>
+<p align="center"><img src="github-metrics.svg?random=0" alt="profile-metrics" width="80%"></p>
