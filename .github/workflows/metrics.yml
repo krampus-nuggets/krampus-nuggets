@@ -54,3 +54,27 @@ jobs:
           plugin_topics_limit: 30
           plugin_topics_mode: icons
           plugin_topics_sort: stars
+
+  bump-profile:
+    runs-on: ubuntu-latest
+    needs: github-metrics
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - name: Pull latest changes
+        run: git pull origin ${{ github.ref_name }}
+      - name: Bump cache-bust param
+        run: |
+          current=$(grep -oP '(?<=random=)\d+' README.md)
+          next=$((current + 1))
+          sed -i "s/random=${current}/random=${next}/" README.md
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --cached --quiet || git commit -m "chore: bump profile cache [skip ci]"
+          git push
