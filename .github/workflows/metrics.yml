@@ -22,7 +22,6 @@ jobs:
           config_order: base.header, topics
           config_padding: 0, 8 + 10%
           config_timezone: Africa/Johannesburg
-          plugin_gists: yes
           plugin_languages: yes
           plugin_languages_analysis_timeout: 15
           plugin_languages_analysis_timeout_repositories: 7.5
@@ -36,24 +35,10 @@ jobs:
           plugin_languages_recent_load: 300
           plugin_languages_sections: most-used
           plugin_languages_threshold: 0%
-          plugin_skyline: yes
-          plugin_skyline_compatibility: yes
-          plugin_skyline_frames: 60
-          plugin_skyline_quality: 0.5
-          plugin_skyline_settings: |
-            {
-              "url": "https://skyline.github.com/${login}/${year}",
-              "ready": "[...document.querySelectorAll('span')].map(span => span.innerText).includes('Share on Twitter')",
-              "wait": 1,
-              "hide": "button, footer, a"
-            }
-          plugin_skyline_year: 2025
-          plugin_stars: yes
-          plugin_stars_limit: 4
           plugin_topics: yes
           plugin_topics_limit: 30
           plugin_topics_mode: icons
-          plugin_topics_sort: stars
+          plugin_topics_sort: starred
 
   bump-profile:
     runs-on: ubuntu-latest
