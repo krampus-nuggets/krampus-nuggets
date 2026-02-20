@@ -18,6 +18,7 @@ jobs:
           user: krampus-nuggets
           template: classic
           base: header, activity, community, repositories, metadata
+          config_display: columns
           config_octicon: yes
           config_order: base.header, topics
           config_padding: 0, 8 + 10%
