@@ -1,5 +1,5 @@
 <!-- ADVISORY -->
-**NOTE:** These metrics only include public data and does not reflect my private/organisation repositories.
+<p align="center"><strong>NOTE:</strong> These metrics only include public data and does not reflect my private repositories</p>
 
 <!-- BODY -->
 [<img align="left" alt="profile-body" width="100%" src="github-metrics.svg?random=5">](#)
