@@ -19,7 +19,7 @@ jobs:
           template: classic
           base: activity, community, repositories, metadata
           config_octicon: yes
-          config_order: base.header,base.activity+community,base.repositories,topics
+          config_order: base.activity+community,base.repositories,languages,stars,isocalendar
           config_padding: 10, 10
           config_timezone: Africa/Johannesburg
           plugin_isocalendar: yes
@@ -51,11 +51,11 @@ jobs:
           ref: ${{ github.ref_name }}
       - name: Pull latest changes
         run: git pull origin ${{ github.ref_name }}
-      - name: Bump cache-bust param
+      - name: Bump cache-bust params
         run: |
-          current=$(grep -oP '(?<=random=)\d+' README.md)
+          current=$(grep -oP '(?<=random=)\d+' README.md | head -1)
           next=$((current + 1))
-          sed -i "s/random=${current}/random=${next}/" README.md
+          sed -i -E "s/random=[0-9]+/random=${next}/g" README.md
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
